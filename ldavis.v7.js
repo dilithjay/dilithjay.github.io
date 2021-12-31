@@ -1039,6 +1039,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .attr("class", "bubble-tool") //  set class so we can remove it when highlight_off is called
                 .style("text-anchor", "middle")
                 .style("font-size", "16px")
+                .style("fill", "#83828c")
                 .text("Top-" + R + " Most Relevant Terms for Topic " + topics + " (" + Freq + "% of tokens)");
 
             // grab the bar-chart data for this topic only:
@@ -1125,6 +1126,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                     .orient("top")
                     .tickSize(-barheight)
                     .tickSubdivide(true)
+                    .style("fill", "#83828c")
                     .ticks(6);
 
             // redraw x-axis
@@ -1141,7 +1143,8 @@ var LDAvis = function(to_select, data_or_file_name) {
             circle.style.fill = color1;
 
             var title = d3.selectAll(to_select + " .bubble-tool")
-                    .text("Top-" + R + " Most Salient Terms");
+                    .text("Top-" + R + " Most Salient Terms")
+                    .style("fill", "#83828c");
             title.append("tspan")
                 .attr("baseline-shift", "super")
                 .attr("font-size", 12)
@@ -1198,6 +1201,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                     .orient("top")
                     .tickSize(-barheight)
                     .tickSubdivide(true)
+                    .style("fill", "#83828c")
                     .ticks(6);
 
             // redraw x-axis
