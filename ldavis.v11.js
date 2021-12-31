@@ -349,28 +349,24 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr('class', "circleGuideTitle")
             .style("text-anchor", "left")
             .style("fontWeight", "bold")
-            .style("fill", "#83828c")
             .text("Marginal topic distribtion");
         d3.select("#" + leftPanelID).append("text")
             .attr("x", cx2 + 10)
             .attr("y", mdsheight + 2 * newSmall)
             .attr('class', "circleGuideLabelSmall")
             .style("text-anchor", "start")
-            .style("fill", "#83828c")
             .text(defaultLabelSmall);
         d3.select("#" + leftPanelID).append("text")
             .attr("x", cx2 + 10)
             .attr("y", mdsheight + 2 * newMedium)
             .attr('class', "circleGuideLabelMedium")
             .style("text-anchor", "start")
-            .style("fill", "#83828c")
             .text(defaultLabelMedium);
         d3.select("#" + leftPanelID).append("text")
             .attr("x", cx2 + 10)
             .attr("y", mdsheight + 2 * newLarge)
             .attr('class', "circleGuideLabelLarge")
             .style("text-anchor", "start")
-            .style("fill", "#83828c")
             .text(defaultLabelLarge);
 
         // bind mdsData to the points in the left panel:
@@ -445,7 +441,6 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", mdswidth/2 + margin.left)
             .attr("y", 30)
             .style("font-size", "16px")
-            .style("fill", "#83828c")
             .style("text-anchor", "middle");
 
         // establish layout and vars for bar chart
@@ -485,7 +480,6 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width + 5)
             .attr("y", mdsheight + 10 + barguide.height/2)
             .style("dominant-baseline", "middle")
-            .style("fill", "#83828c")
             .text("Overall term frequency");
 
         d3.select("#" + barFreqsID).append("rect")
@@ -499,7 +493,6 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width/2 + 5)
             .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
-            .style("fill", "#83828c")
             .text("Estimated term frequency within the selected topic");
 
         // footnotes:
@@ -511,7 +504,6 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", 0)
             .attr("y", mdsheight + 10 + (6/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
-            .style("fill", "#83828c")
             .text("1. saliency(term w) = frequency(w) * [sum_t p(t | w) * log(p(t | w)/p(t))] for topics t; see Chuang et. al (2012)");
         d3.select("#" + barFreqsID)
             .append("a")
@@ -521,7 +513,6 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", 0)
             .attr("y", mdsheight + 10 + (8/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
-            .style("fill", "#83828c")
             .text("2. relevance(term w | topic t) = \u03BB * p(w | t) + (1 - \u03BB) * p(w | t)/p(w); see Sievert & Shirley (2014)");
 
         // Bind 'default' data to 'default' bar chart
@@ -557,7 +548,6 @@ var LDAvis = function(to_select, data_or_file_name) {
                 return (termID + d.Term);
             })
             .style("text-anchor", "end") // right align text - use 'middle' for center alignment
-            .style("fill", "#83828c")
             .text(function(d) {
                 return d.Term;
             })
@@ -586,7 +576,6 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .attr("class", "bubble-tool") //  set class so we can remove it when highlight_off is called
                 .style("text-anchor", "middle")
                 .style("font-size", "16px")
-                .style("fill", "#83828c")
                 .text("Top-" + R + " Most Salient Terms");
 
         title.append("tspan")
@@ -1039,7 +1028,6 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .attr("class", "bubble-tool") //  set class so we can remove it when highlight_off is called
                 .style("text-anchor", "middle")
                 .style("font-size", "16px")
-                .style("fill", "#83828c")
                 .text("Top-" + R + " Most Relevant Terms for Topic " + topics + " (" + Freq + "% of tokens)");
 
             // grab the bar-chart data for this topic only:
