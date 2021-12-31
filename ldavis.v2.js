@@ -441,6 +441,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", mdswidth/2 + margin.left)
             .attr("y", 30)
             .style("font-size", "16px")
+            .style("fill", "#83828c")
             .style("text-anchor", "middle");
 
         // establish layout and vars for bar chart
