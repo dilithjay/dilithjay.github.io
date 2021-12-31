@@ -480,6 +480,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width + 5)
             .attr("y", mdsheight + 10 + barguide.height/2)
             .style("dominant-baseline", "middle")
+            .style("color", "white")
             .text("Overall term frequency");
 
         d3.select("#" + barFreqsID).append("rect")
