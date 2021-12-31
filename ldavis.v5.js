@@ -599,7 +599,6 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .orient("top")
                 .tickSize(-barheight)
                 .tickSubdivide(true)
-                .style("fill", "#83828c")
                 .ticks(6);
 
         chart.attr("class", "xaxis")
