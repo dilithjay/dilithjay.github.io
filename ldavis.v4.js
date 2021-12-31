@@ -481,7 +481,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width + 5)
             .attr("y", mdsheight + 10 + barguide.height/2)
             .style("dominant-baseline", "middle")
-            .style("color", "white")
+            .style("color", "#83828c")
             .text("Overall term frequency");
 
         d3.select("#" + barFreqsID).append("rect")
@@ -495,6 +495,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width/2 + 5)
             .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
+            .style("color", "#83828c")
             .text("Estimated term frequency within the selected topic");
 
         // footnotes:
@@ -506,6 +507,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", 0)
             .attr("y", mdsheight + 10 + (6/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
+            .style("color", "#83828c")
             .text("1. saliency(term w) = frequency(w) * [sum_t p(t | w) * log(p(t | w)/p(t))] for topics t; see Chuang et. al (2012)");
         d3.select("#" + barFreqsID)
             .append("a")
@@ -515,6 +517,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", 0)
             .attr("y", mdsheight + 10 + (8/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
+            .style("color", "#83828c")
             .text("2. relevance(term w | topic t) = \u03BB * p(w | t) + (1 - \u03BB) * p(w | t)/p(w); see Sievert & Shirley (2014)");
 
         // Bind 'default' data to 'default' bar chart
@@ -1287,11 +1290,14 @@ var LDAvis = function(to_select, data_or_file_name) {
 
             // Go back to the default guide
             d3.select(to_select + " .circleGuideTitle")
+                .style("color", "#83828c")
                 .text("Marginal topic distribution");
             d3.select(to_select + " .circleGuideLabelLarge")
+                .style("color", "#83828c")
                 .text(defaultLabelLarge);
             d3.select(to_select + " .circleGuideLabelSmall")
                 .attr("y", mdsheight + 2 * newSmall)
+                .style("color", "#83828c")
                 .text(defaultLabelSmall);
             d3.select(to_select + " .circleGuideSmall")
                 .attr("r", newSmall)
