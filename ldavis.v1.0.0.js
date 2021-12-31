@@ -383,7 +383,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("y", function(d) {
                 return (yScale(+d.y) + 4);
             })
-            .attr("stroke", "red")
+            .attr("stroke", "white")
             .attr("opacity", 1)
             .style("text-anchor", "middle")
             .style("font-size", "11px")
@@ -407,7 +407,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("cy", function(d) {
                 return (yScale(+d.y));
             })
-            .attr("stroke", "red")
+            .attr("stroke", "black")
             .attr("id", function(d) {
                 return (topicID + d.topics);
             })
