@@ -383,7 +383,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("y", function(d) {
                 return (yScale(+d.y) + 4);
             })
-            .attr("stroke", "white")
+            .attr("stroke", "#83828c")
             .attr("opacity", 1)
             .style("text-anchor", "middle")
             .style("font-size", "11px")
@@ -550,6 +550,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                 return (termID + d.Term);
             })
             .style("text-anchor", "end") // right align text - use 'middle' for center alignment
+            .style("fill", "#83828c")
             .text(function(d) {
                 return d.Term;
             })
@@ -578,6 +579,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .attr("class", "bubble-tool") //  set class so we can remove it when highlight_off is called
                 .style("text-anchor", "middle")
                 .style("font-size", "16px")
+                .style("fill", "#83828c")
                 .text("Top-" + R + " Most Salient Terms");
 
         title.append("tspan")
