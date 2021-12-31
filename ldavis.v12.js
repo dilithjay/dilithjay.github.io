@@ -1130,8 +1130,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             circle.style.fill = color1;
 
             var title = d3.selectAll(to_select + " .bubble-tool")
-                    .text("Top-" + R + " Most Salient Terms")
-                    .style("fill", "#83828c");
+                    .text("Top-" + R + " Most Salient Terms");
             title.append("tspan")
                 .attr("baseline-shift", "super")
                 .attr("font-size", 12)
@@ -1284,14 +1283,11 @@ var LDAvis = function(to_select, data_or_file_name) {
 
             // Go back to the default guide
             d3.select(to_select + " .circleGuideTitle")
-                .style("fill", "#83828c")
                 .text("Marginal topic distribution");
             d3.select(to_select + " .circleGuideLabelLarge")
-                .style("fill", "#83828c")
                 .text(defaultLabelLarge);
             d3.select(to_select + " .circleGuideLabelSmall")
                 .attr("y", mdsheight + 2 * newSmall)
-                .style("fill", "#83828c")
                 .text(defaultLabelSmall);
             d3.select(to_select + " .circleGuideSmall")
                 .attr("r", newSmall)
