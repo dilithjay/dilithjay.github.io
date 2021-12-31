@@ -26,6 +26,10 @@ text {
     font-size: 11px;
 }
 
+svg text {
+    fill: #83828c;
+}
+
 /* IPython Notebook CSS to allow visualization to fit */
 /* I'm open to a better way of accomplishing this goal... */
 .container { width:1350px !important; }
